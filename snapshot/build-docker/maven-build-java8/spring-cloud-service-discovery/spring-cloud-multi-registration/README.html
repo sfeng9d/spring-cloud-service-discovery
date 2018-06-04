@@ -128,6 +128,9 @@
     &lt;dependency&gt;&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&lt;artifactId&gt;spring-cloud-starter-eureka&lt;/artifactId&gt;&lt;/dependency&gt;
     &lt;dependency&gt;&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&lt;artifactId&gt;spring-cloud-starter-consul-all&lt;/artifactId&gt;&lt;/dependency&gt;
     &lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;/dependency&gt;
+    
+    &lt;!--  --&gt;
+    &lt;dependency&gt;&lt;groupId&gt;cn.home1&lt;/groupId&gt;&lt;artifactId&gt;spring-cloud-multi-registration&lt;/artifactId&gt;&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;&lt;/dependency&gt;
   &lt;!-- @formatter:on --&gt;
 &lt;/dependencies&gt;
 </pre></div></div>
@@ -165,6 +168,19 @@ spring:
         fail-fast: true
       # custom property
       auto-multi-registration.enabled: true
+</pre></div></div>
+
+<p>Only snapshots available for now <tt>https://oss.sonatype.org/content/repositories/snapshots/cn/home1/spring-cloud-multi-registration/0.0.1-SNAPSHOT/</tt> To access these snapshots, you may need to add OSSRH-snapshots (sonatype-snapshots) into your <tt>pom.xml</tt></p>
+
+<div>
+<div>
+<pre class="source">&lt;repository&gt;
+    &lt;id&gt;OSSRH-snapshots&lt;/id&gt;
+    &lt;name&gt;central snapshots&lt;/name&gt;
+    &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
+    &lt;releases&gt;&lt;enabled&gt;false&lt;/enabled&gt;&lt;/releases&gt;
+    &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;updatePolicy&gt;${repositories.snapshots.updatePolicy}&lt;/updatePolicy&gt;&lt;/snapshots&gt;
+&lt;/repository&gt;
 </pre></div></div>
 </div>
 <div class="section">
