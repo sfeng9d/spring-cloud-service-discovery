@@ -1,4 +1,3 @@
-cn.home1.cloud.example
 cn.home1.cloud.netflix.eureka
 cn.home1.cloud.netflix.eureka.server
 org.springframework.boot.actuate.endpoint
