@@ -86,7 +86,7 @@
         <ul class="breadcrumb">
         <li id="publishDate">Last Published: 2018-07-20<span class="divider">|</span>
 </li>
-          <li id="projectVersion">Version: 2.0.1-springboot2-SNAPSHOT</li>
+          <li id="projectVersion">Version: 1.0.1-servicelabel-SNAPSHOT</li>
         </ul>
       </div>
       <div class="row-fluid">
@@ -127,7 +127,7 @@
 <div>
 <pre class="source">&lt;dependencies&gt;
   &lt;!-- @formatter:off --&gt;
-    &lt;dependency&gt;&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;&lt;/dependency&gt;
+    &lt;dependency&gt;&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&lt;artifactId&gt;spring-cloud-starter-eureka&lt;/artifactId&gt;&lt;/dependency&gt;
     &lt;dependency&gt;&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&lt;artifactId&gt;spring-cloud-starter-consul-all&lt;/artifactId&gt;&lt;/dependency&gt;
     &lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;/dependency&gt;
     
@@ -149,7 +149,7 @@
     config:
       enabled: false
     consul:
-      host: ${SPRING_CLOUD_CONSUL_HOST:consul}
+      host: ${SPRING_CLOUD_CONSUL_HOST:consul.local}
       port: ${SPRING_CLOUD_CONSUL_PORT:8500}
 </pre></div></div>
 
