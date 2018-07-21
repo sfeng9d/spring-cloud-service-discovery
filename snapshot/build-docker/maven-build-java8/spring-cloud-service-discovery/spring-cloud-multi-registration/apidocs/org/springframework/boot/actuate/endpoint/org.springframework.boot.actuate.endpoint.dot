@@ -9,34 +9,34 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// org.springframework.boot.actuate.endpoint.ListEndPoints
-	c0 [label=<<table title="org.springframework.boot.actuate.endpoint.ListEndPoints" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListEndPoints.html">
+	// org.springframework.boot.actuate.endpoint.ShowAllEndpoint
+	c0 [label=<<table title="org.springframework.boot.actuate.endpoint.ShowAllEndpoint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShowAllEndpoint.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ListEndPoints </td></tr>
+<tr><td align="center" balign="center"> ShowAllEndpoint </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ListEndPoints(endpoints : List&lt;Endpoint&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ShowAllEndpoint(endpoints : List&lt;Endpoint&lt;&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + invoke() : List&lt;Endpoint&lt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setObjectMappers(objectMappers : List&lt;ObjectMapper&gt;) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ListEndPoints.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// org.springframework.boot.actuate.endpoint.ListEndPointsAutoConfiguration
-	c1 [label=<<table title="org.springframework.boot.actuate.endpoint.ListEndPointsAutoConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListEndPointsAutoConfiguration.html">
+		</table>>, URL="./ShowAllEndpoint.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// org.springframework.boot.actuate.endpoint.ShowAllEndpointAutoConfiguration
+	c1 [label=<<table title="org.springframework.boot.actuate.endpoint.ShowAllEndpointAutoConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShowAllEndpointAutoConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ListEndPointsAutoConfiguration </td></tr>
+<tr><td align="center" balign="center"> ShowAllEndpointAutoConfiguration </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ListEndPointsAutoConfiguration() </td></tr>
-<tr><td align="left" balign="left"> + listEndPoints(endpoints : List&lt;Endpoint&lt;&gt;&gt;) : ListEndPoints </td></tr>
+<tr><td align="left" balign="left"> + ShowAllEndpointAutoConfiguration() </td></tr>
+<tr><td align="left" balign="left"> + listEndPoints(endpoints : List&lt;Endpoint&lt;&gt;&gt;) : ShowAllEndpoint </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ListEndPointsAutoConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//org.springframework.boot.actuate.endpoint.ListEndPoints extends org.springframework.boot.actuate.endpoint.AbstractEndpoint<java.util.List<org.springframework.boot.actuate.endpoint.Endpoint>>
+		</table>>, URL="./ShowAllEndpointAutoConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//org.springframework.boot.actuate.endpoint.ShowAllEndpoint extends org.springframework.boot.actuate.endpoint.AbstractEndpoint<java.util.List<org.springframework.boot.actuate.endpoint.Endpoint>>
 	c7:p -> c0:p [dir=back,arrowtail=empty];
 	// org.springframework.boot.actuate.endpoint.AbstractEndpoint<T>
 	c7 [label=<<table title="org.springframework.boot.actuate.endpoint.AbstractEndpoint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/boot/actuate/endpoint/AbstractEndpoint.html">
