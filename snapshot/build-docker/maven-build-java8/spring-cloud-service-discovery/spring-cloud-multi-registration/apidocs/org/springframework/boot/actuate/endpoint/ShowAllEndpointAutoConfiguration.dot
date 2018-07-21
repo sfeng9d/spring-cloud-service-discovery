@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.springframework.boot.actuate.endpoint.ShowAllEndpointAutoConfiguration
-	c78 [label=<<table title="org.springframework.boot.actuate.endpoint.ShowAllEndpointAutoConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ShowAllEndpointAutoConfiguration.html">
+	c81 [label=<<table title="org.springframework.boot.actuate.endpoint.ShowAllEndpointAutoConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ShowAllEndpointAutoConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ShowAllEndpointAutoConfiguration </td></tr>
 		</table></td></tr>
@@ -19,7 +19,6 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ShowAllEndpointAutoConfiguration() </td></tr>
-<tr><td align="left" balign="left"> + listEndPoints(endpoints : List&lt;Endpoint&lt;&gt;&gt;) : ShowAllEndpoint </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ShowAllEndpointAutoConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
