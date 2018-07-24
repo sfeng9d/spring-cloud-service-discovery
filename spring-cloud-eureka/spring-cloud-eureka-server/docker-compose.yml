@@ -10,7 +10,7 @@ services:
     environment:
     - EUREKA_CLIENT_FETCHREGISTRY=false
     - EUREKA_CLIENT_REGISTERWITHEUREKA=false
-    - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${SECURITY_USER_NAME:-user}:${SECURITY_USER_PASSWORD:-user_pass}@eureka-standalone.local:${SERVER_PORT:-8761}/eureka/
+    - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${SPRING_SECURITY_USER_NAME:-user}:${SPRING_SECURITY_USER_PASSWORD:-user_pass}@eureka-standalone:${SERVER_PORT:-8761}/eureka/
     #- EUREKA_INSTANCE_HOSTNAME=${CONTAINER_HOST_NAME:-eureka-standalone}
     - EUREKA_INSTANCE_IPADDRESS=${HOST_IPADDRESS:-172.16.238.10}
 
@@ -21,13 +21,13 @@ services:
     - INSTANCE_NAME=${CONTAINER_HOST_NAME:-eureka-standalone}
 
 
-
-
-
     - SPRING_APPLICATION_NAME=eureka-standalone
     - SPRING_CLOUD_CLIENT_HOSTNAME=${CONTAINER_HOST_NAME:-eureka-standalone}
     - SPRING_CLOUD_CLIENT_IPADDRESS=${HOST_IPADDRESS:-172.16.238.10}
     - SPRING_PROFILES_ACTIVE=develop.env,manual_ip_hostname,port_nonsecure,standalone
+
+
+
     hostname: ${CONTAINER_HOST_NAME:-eureka-standalone}
     networks:
       local-network:
@@ -36,7 +36,7 @@ services:
     ports:
     - "${SERVER_PORT:-8761}:${SERVER_PORT:-8761}"
     volumes:
-    - data:/root/data
+    - data:/home/alpine
     - data:/tmp
 
 networks:

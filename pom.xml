@@ -32,7 +32,7 @@
     </scm>
 
     <properties>
-        <deps-spring-boot.version>0.0.7.OSS</deps-spring-boot.version>
+        <deps-spring-boot.version>0.0.8.OSS-SNAPSHOT</deps-spring-boot.version>
         <log-config.version>0.0.8.OSS</log-config.version>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
 
@@ -43,6 +43,7 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- @formatter:off -->
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -50,27 +51,22 @@
                     <configuration>
                         <classifier>exec</classifier>
                         <layout>ZIP</layout>
-                        <!-- @formatter:off -->
-                    <excludes>
-                        <exclude><groupId>org.inferred</groupId><artifactId>freebuilder</artifactId></exclude>
-                        <exclude><groupId>com.google.auto.value</groupId><artifactId>auto-value</artifactId></exclude>
-                        <exclude><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId></exclude>
-                    </excludes>
-                    <!-- @formatter:on -->
+                        <excludes>
+                            <exclude><groupId>org.inferred</groupId><artifactId>freebuilder</artifactId></exclude>
+                            <exclude><groupId>com.google.auto.value</groupId><artifactId>auto-value</artifactId></exclude>
+                            <exclude><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId></exclude>
+                        </excludes>
                     </configuration>
                     <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                            <configuration>
-                                <attach>false</attach>
-                            </configuration>
-                        </execution>
+                        <execution><goals><goal>build-info</goal></goals></execution>
+                        <execution><goals><goal>repackage</goal></goals><configuration><attach>false</attach></configuration></execution>
                     </executions>
                 </plugin>
+                <!-- @formatter:on -->
             </plugins>
         </pluginManagement>
+        <plugins>
+        </plugins>
     </build>
 
     <dependencyManagement>
@@ -94,12 +90,15 @@
     <dependencies>
         <!-- @formatter:off -->
         <dependency><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><scope>provided</scope></dependency>
+
+        <dependency><groupId>cn.home1</groupId><artifactId>log4j2-test-config</artifactId><scope>test</scope></dependency>
         <!-- @formatter:on -->
     </dependencies>
 
     <modules>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-multi-registration</module>
+        <module>spring-cloud-service-filter</module>
     </modules>
 
     <profiles>
@@ -110,6 +109,7 @@
             <modules>
                 <module>spring-cloud-eureka</module>
                 <module>spring-cloud-multi-registration</module>
+                <module>spring-cloud-service-filter</module>
                 <module>service-discovery-examples</module>
             </modules>
         </profile>

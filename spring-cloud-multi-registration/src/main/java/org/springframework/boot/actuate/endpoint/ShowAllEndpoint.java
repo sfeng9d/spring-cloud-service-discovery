@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class ListEndPoints extends AbstractEndpoint<List<Endpoint>> {
+public class ShowAllEndpoint extends AbstractEndpoint<List<Endpoint>> {
 
   private List<Endpoint> endpoints;
 
-  public ListEndPoints(final List<Endpoint> endpoints) {
-    super("showendpoints");
+  public ShowAllEndpoint(final List<Endpoint> endpoints) {
+    super("show-all");
     this.endpoints = endpoints;
   }
 

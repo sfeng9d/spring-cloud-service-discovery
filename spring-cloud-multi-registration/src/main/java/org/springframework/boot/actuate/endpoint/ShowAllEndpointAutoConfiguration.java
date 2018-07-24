@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
-public class ListEndPointsAutoConfiguration {
+public class ShowAllEndpointAutoConfiguration {
   
   @Bean
-  public ListEndPoints listEndPoints(List<Endpoint> endpoints) {
-    return new ListEndPoints(endpoints);
+  public ShowAllEndpoint listEndPoints(List<Endpoint> endpoints) {
+    return new ShowAllEndpoint(endpoints);
   }
 }

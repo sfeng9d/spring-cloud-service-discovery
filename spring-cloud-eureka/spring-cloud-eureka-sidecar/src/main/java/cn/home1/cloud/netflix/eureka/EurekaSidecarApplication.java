@@ -33,7 +33,7 @@ public class EurekaSidecarApplication {
     log.info("server.context-path: {}", this.environment.getProperty("server.context-path"));
     log.info("management.context-path: {}", this.environment.getProperty("management.context-path"));
 
-    final String passwordFromSystemEnv = System.getenv("SECURITY_USER_PASSWORD");
+    final String passwordFromSystemEnv = System.getenv("SPRING_SECURITY_USER_PASSWORD");
     if (StringUtils.isEmpty(passwordFromSystemEnv)) {
       final String username = this.securityProperties.getUser().getName();
       final String password = this.securityProperties.getUser().getPassword();
