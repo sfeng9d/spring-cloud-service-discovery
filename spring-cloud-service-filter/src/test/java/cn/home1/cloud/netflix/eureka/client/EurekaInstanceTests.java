@@ -8,6 +8,7 @@ import com.netflix.discovery.shared.Application;
 
 import lombok.extern.slf4j.Slf4j;
 
+import org.joda.time.DateTime;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -62,6 +63,9 @@ public class EurekaInstanceTests {
   public void testEurekaInstance() {
     log.info("testEurekaClient");
 
+    final DateTime from = DateTime.now();
+    final DateTime till = from.plusSeconds(80);
+
     final DiscoveryClient client = this.getDiscoveryClient();
 
     while (!Thread.currentThread().isInterrupted()) {
@@ -75,9 +79,17 @@ public class EurekaInstanceTests {
               log.info(String.format("  metaData %s: %s", md.getKey(), md.getValue()));
             }
           });
+
+          if (instanceInfos.size() > 0) {
+            return;
+          }
         }
 
-        Thread.sleep(TimeUnit.SECONDS.toMillis(5));
+        if (DateTime.now().isBefore(till)) {
+          Thread.sleep(TimeUnit.SECONDS.toMillis(5));
+        } else {
+          throw new RuntimeException("no application and instanceInfos found");
+        }
       } catch (final InterruptedException ex) {
         Thread.currentThread().interrupt();
       }

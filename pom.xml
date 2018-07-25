@@ -58,8 +58,8 @@
                         </excludes>
                     </configuration>
                     <executions>
-                        <execution><goals><goal>build-info</goal></goals></execution>
-                        <execution><goals><goal>repackage</goal></goals><configuration><attach>false</attach></configuration></execution>
+                        <execution><id>build-info</id><goals><goal>build-info</goal></goals></execution>
+                        <execution><id>repackage</id><goals><goal>repackage</goal></goals><configuration><attach>false</attach></configuration></execution>
                     </executions>
                 </plugin>
                 <!-- @formatter:on -->
